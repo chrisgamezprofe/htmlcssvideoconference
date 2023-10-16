@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Conferencia - Chris Gámez Profe</title>
+    <link rel="icon" type="image/x-icon" href="image-assets/logo.svg">
+    <link rel="stylesheet" href="css/style-frontpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Nunito&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <div id="form">
+            <div class="front">
+                <div class="top-content">
+
+                    <img src="image-assets/logo.svg" width="100" alt="">
+                    <h3 style="color: #ffffff;">CREAR NUEVA REUNIÓN</h3><br>
+
+                    <input class="textfield nameIcon" id="startun" type="text" placeholder="Nombre ...">
+                    <input class="textfield passIcon" id="startpc" type="password" placeholder="Clave de acceso ...">
+                    <input class="start" type="button" value="Crear reunión">
+                    <p id="or" class="or-start">O</p>
+                </div> <!--End of top-content-->
+                <div class="bot-content">
+                    <br />
+                    <p style="color: #ffffff;">
+                        Te han invitado a una reunión?
+                        <br />
+                        <a href="#" onclick="flipToBack()"
+                            style="color: #ffffff; font-weight: bold; text-decoration: none;">
+                            Unirse ahora.
+                        </a>
+                    </p>
+                </div> <!--End of bot-content-->
+            </div><!--End of front-->
+            <div class="back">
+                <div class="top-content">
+                    <br><br>
+                    <h3 style="color: #fefefe;">UNIRSE A VIDEOCONFERENCIA</h3><br>
+                    <p>
+                        Conectarse a una sala ahora. <br>
+                        <b style="color: #fefefe;">es Gratis!</b>
+                    </p><br><br>
+                    <input class="textfield nameIcon" id="joinun" type="text" placeholder="Nombre ...">
+                    <input class="textfield inviteIcon" id="joininv" type="text" placeholder="ID Reunión ...">
+                    <input class="textfield passIcon" id="joinpc" type="password" placeholder="Clave de acceso ...">
+                    <input class="join" type="button" value="Entrar a la reunión!" onclick="joinRoom()">
+                    <p id="or" class="or-join">O</p>
+                </div> <!--End of back top-content-->
+                <div class="bot-content">
+                    <br>
+                    <p style="color: #ffffff;">
+                        Quieres crear una reunión?
+                        <br />
+                        <a href="#" onclick="flipToFront()"
+                            style="color: #ffffff; font-weight: bold; text-decoration: none;">
+                            Inicia ahora.
+                        </a>
+                    </p>
+                </div> <!--End of back bot-content-->
+            </div> <!--End of back-->
+        </div><!--End of form-->
+    </div><!--End of container-->
+
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        function flipToBack() {
+            document.getElementById("form").style.transform = 'rotateY(180deg)';
+        }
+        function flipToFront() {
+            document.getElementById("form").style.transform = 'rotateY(0deg)';
+        }
+
+    </script>
+</body>
+
+</html>
